@@ -9,12 +9,13 @@ import {
 
 // This file contains utility functions for interacting with the OpenAI API
 
-if (!process.env.OPENAI_API_KEY) {
-  throw new Error("Missing OPENAI_API_KEY environment variable");
+
+if (!process.env.NEXT_PUBLIC_OPENAI_API_KEY) {
+  throw new Error("Missing NEXT_PUBLIC_OPENAI_API_KEY environment variable");
 }
 
 const configuration = new Configuration({
-  apiKey: process.env.OPENAI_API_KEY,
+  apiKey: process.env.NEXT_PUBLIC_OPENAI_API_KEY,
 });
 export const openai = new OpenAIApi(configuration);
 
